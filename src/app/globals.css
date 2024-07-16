@@ -19,6 +19,11 @@ body {
 body {
   color: var(--foreground);
   background: var(--background);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 * {
@@ -29,11 +34,55 @@ body {
 
 a {
   color: inherit;
-  text-decoration: none;
 }
 
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
+}
+
+main {
+  width: 500px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid var(--foreground);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+h1 {
+  margin-bottom: 20px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 80%;
+  margin-bottom: 20px;
+}
+input {
+  width: 100%;
+  padding: 10px 20px;
+  margin: 10px 0;
+  border: 1px solid #555;
+  border-radius: 10px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #161b22;
+  transition: background-color 250ms ease-in-out;
+}
+button:hover {
+  background-color: #157efb;
+}
+.errortext {
+  color: red;
 }
